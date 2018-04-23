@@ -115,10 +115,21 @@ $( document ).ready( function() {
   drawNumberLine(-10, 10);
   var canvas = document.getElementById("myCanvas")
   var image  = canvas.toDataURL('image/jpeg');
-  console.log(image);
   $( "#downloadLnk1" ).attr('href', image);
   $( "#downloadLnk2" ).attr('href', image);
 });
+
+$( "#downloadLnk1 ").click( function() {
+  var canvas = document.getElementById("myCanvas")
+  var image  = canvas.toDataURL('image/jpeg');
+  $( "#downloadLnk1" ).attr('href', image);
+})
+
+$( "#downloadLnk2 ").click( function() {
+  var canvas = document.getElementById("myCanvas")
+  var image  = canvas.toDataURL('image/jpeg');
+  $( "#downloadLnk2" ).attr('href', image);
+})
 
 function openTab(evt, tabName) {
     // Declare all variables
