@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+    <title>Numberline</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+</head>
+<body>
+	<canvas id="myCanvas" width="700" height="400"></canvas>
+	<div id="menuSelect" align="center">
+		<div class="tab">
+	  		<button class="tablinks" onclick="openTab(event, 'WholeNumbers')" id="defaultOpen">Whole Numbers</button>
+	  		<button class="tablinks" onclick="openTab(event, 'Fractions')">Fractions</button>
+		</div>
+
+		<!-- Tab content -->
+		<div id="WholeNumbers" class="tabcontent">
+		  	<h3>Whole Numbers</h3>
+		  	<form>
+				<table>
+					<tr>
+						<th>Starting Number</th>
+						<th><input type="text" value="-10" id="StartNo"></th>
+					</tr>
+					<tr>
+						<th>Ending Number</th>
+						<th><input type="text" value="10" id="EndNo"></th>
+					</tr>	
+					<tr>
+						<th colspan="2">
+							<input type="button" value="Draw!" id="drawWhole">	
+						</th>	
+					</tr>
+					<tr>
+						<th colspan="2">
+							<a id="downloadLnk1" download="NumberLine.jpeg">Download as image</a>
+						</th>	
+					</tr>
+				</table>
+			</form>	
+		</div>
+
+		<div id="Fractions" class="tabcontent">
+		  	<h3>Fractions</h3>
+		  	<form>
+				<table>
+					<tr>
+						<th>Start (main)</th>
+						<th><input type="text" value="4" id="StartMain"></th>
+						<th>Start (frac)</th>
+						<th><input type="text" value="2" id="StartFrac"></th>
+					</tr>
+					<tr>
+						<th>End (main)</th>
+						<th><input type="text" value="6" id="EndMain"></th>
+						<th>End (frac)</th>
+						<th><input type="text" value="1" id="EndFrac"></th>
+					</tr>
+					<tr>
+						<th colspan="2">Fractional Base</th>
+						<th colspan="2"><input type="text" value="5" id="FracBase"></th>
+					</tr>	
+					<tr>
+						<th colspan="4">
+							<input type="button" value="Draw!" id="drawFrac">	
+						</th>	
+					</tr>
+					<tr>
+						<th colspan="4">
+							<a id="downloadLnk2" download="NumberLine.jpeg">Download as image</a>
+						</th>	
+					</tr>
+				</table>
+			</form>	
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./app.js"></script>
+    <script>
+		document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>
+
+
